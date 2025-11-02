@@ -1,0 +1,149 @@
+.browse-page-container {
+    padding: 2rem 1.5rem;
+    min-height: 80vh;
+}
+
+.browse-page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.browse-page-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.browse-page-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+}
+
+.browse-page-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: 0.5rem;
+}
+
+.search-input {
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sort-control label {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.sort-select {
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.browse-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Reusing course card styles from FeaturedCourses.css */
+.browse-courses-grid .course-card {
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.browse-courses-grid .course-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+.browse-courses-grid .course-image { width: 100%; height: 12rem; object-fit: cover; }
+.browse-courses-grid .course-content { padding: 1.5rem; flex-grow: 1; }
+.browse-courses-grid .course-category { color: var(--color-accent); font-size: 0.875rem; font-weight: 600; }
+.browse-courses-grid .course-title { font-size: 1.125rem; font-weight: 700; color: var(--color-text-primary); margin-top: 0.5rem; height: 3.5rem; }
+.browse-courses-grid .course-instructor { display: flex; align-items: center; margin-top: 1rem; }
+.browse-courses-grid .instructor-name { color: var(--color-text-muted); font-size: 0.875rem; }
+.browse-courses-grid .course-meta { margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.browse-courses-grid .course-rating { display: flex; align-items: center; }
+.browse-courses-grid .rating-number { font-weight: 700; color: #facc15; margin-right: 0.25rem; }
+.browse-courses-grid .rating-stars { display: flex; }
+.browse-courses-grid .star-icon { width: 1rem; height: 1rem; }
+.browse-courses-grid .star-icon.filled { color: #facc15; }
+.browse-courses-grid .star-icon.empty { color: #4b5563; }
+.browse-courses-grid .course-price { font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); }
+.browse-courses-grid .course-card-footer { padding: 0 1.5rem 1.5rem 1.5rem; }
+.browse-courses-grid .add-to-cart-btn {
+    width: 100%;
+    background-color: var(--color-accent-dark);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.browse-courses-grid .add-to-cart-btn:hover:not(:disabled) { background-color: var(--color-accent-hover); }
+.browse-courses-grid .add-to-cart-btn:disabled { background-color: var(--color-bg-tertiary); color: var(--color-text-muted); cursor: not-allowed; }
+
+.no-results-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 4rem 2rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: 0.5rem;
+}

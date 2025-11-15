@@ -1,0 +1,153 @@
+.course-page-container {
+    padding: 2rem 1.5rem;
+    min-height: 80vh;
+}
+
+.course-page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.course-page-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.course-page-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 80ch;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.course-page-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.video-player-section {
+    background-color: var(--color-bg-secondary);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.video-player {
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--color-text-muted);
+}
+
+.video-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-button {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-button:hover {
+    background-color: var(--color-border);
+}
+
+.video-playlist-section {
+    background-color: var(--color-bg-secondary);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    max-height: 600px;
+    overflow-y: auto;
+}
+.video-playlist-section::-webkit-scrollbar { width: 8px; }
+.video-playlist-section::-webkit-scrollbar-track { background: var(--color-bg-primary); border-radius: 10px; }
+.video-playlist-section::-webkit-scrollbar-thumb { background: var(--color-bg-tertiary); border-radius: 10px; }
+.video-playlist-section::-webkit-scrollbar-thumb:hover { background: var(--color-border); }
+
+
+.video-playlist-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.video-playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.playlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.playlist-item:hover {
+    background-color: var(--color-bg-tertiary);
+}
+
+.playlist-item.active {
+    background-color: var(--color-bg-tertiary);
+    border-color: var(--color-accent);
+}
+
+.playlist-item-title {
+    color: var(--color-text-secondary);
+}
+
+.playlist-item-duration {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+
+@media (min-width: 1024px) {
+    .course-page-content {
+        grid-template-columns: 3fr 1fr;
+    }
+}

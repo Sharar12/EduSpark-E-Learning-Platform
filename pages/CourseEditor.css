@@ -1,0 +1,168 @@
+.editor-container {
+    padding: 2rem 1.5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.editor-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.editor-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.editor-form {
+    background-color: var(--color-bg-secondary);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.playlist-editor {
+    margin-top: 2rem;
+    background-color: var(--color-bg-secondary);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+}
+
+.playlist-editor h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.video-editor-item {
+    background-color: var(--color-bg-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-tertiary);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.video-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.video-inputs input {
+     width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.video-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.btn-secondary, .btn-danger {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.btn-danger {
+    background-color: #991b1b;
+    color: white;
+    border: 1px solid #7f1d1d;
+}
+
+.btn-add-video {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-bg-tertiary);
+    border: 1px dashed var(--color-border);
+    color: var(--color-text-muted);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.editor-footer {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-dark);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-span-2 {
+        grid-column: span 2 / span 2;
+    }
+    .video-editor-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .video-inputs {
+        grid-template-columns: 2fr 1fr 2fr;
+        flex-grow: 1;
+        margin-right: 1rem;
+    }
+}
